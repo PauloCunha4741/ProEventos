@@ -23,7 +23,7 @@ namespace ProEventos.Persistence.Contextos
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Palestrante>()
-                .HasMany(e => e.RedesSociais)
+                .HasMany(p => p.RedesSociais)
                 .WithOne(RedeSocial => RedeSocial.Palestrante)
                 .OnDelete(DeleteBehavior.Cascade);
         }
